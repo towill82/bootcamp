@@ -3,16 +3,16 @@ public class DemoOperator {
     int x = 3; 
 
     x = x + 1;
-    System.out.println("x=" + x); // string + int -> string
+    System.out.println("x=" + x); // 4, string + int -> string
     
     x++; // same as x = x + 1;
-    System.out.println("x=" + x);
+    System.out.println("x=" + x); // 5
 
     x += 1; // same as x = x + 1;
-    System.out.println("x=" + x);
+    System.out.println("x=" + x); // 6
 
     x += 2; // same as x = x + 2;
-    System.out.println("x=" + x);
+    System.out.println("x=" + x); // 8
 
     ++x; // same as x = x + 1;
     System.out.println("x=" + x);
@@ -72,6 +72,20 @@ public class DemoOperator {
     System.out.println (r12);
 
 
+    int n = 3;
+    int result = n++ * 3; // original n multiply 3 first, assign 9 to result, then n = n + 1;
+    System.out.println(result); // 9
+    System.out.println(n); //4
+
+    int m = 4;
+    int result2 = ++m * 5; // m = m + 1 first, multiply 5,assign 25 to result2;
+    System.out.println(result2); //25
+    System.out.println(m); //5
+
+    int k = 4;
+    int result3 = k++ * 7 * ++k; 
+    System.out.println(result3); // 168 = (4 * 7) * 6
+    
 
   }
   
