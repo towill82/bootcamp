@@ -18,7 +18,7 @@
   public class JavaQuest1 {
   
     public static void main(String[] args) {
-  
+
       System.out.println("I am going to add two numbers together:");
       int first = 31;
       int second = 42;
