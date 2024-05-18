@@ -1,14 +1,5 @@
-/**
- * Expected Output:
- * 
- * a > 9
- * str length < 27
- * 2020 is a leap year.
- * 2400 is a leap year.
- */
-// Primitive types and operators
-public class JavaQuest2 {
-  public static void main(String[] args) {
+public class Q2 {
+public static void main(String[] args) {
     int a = 10;
     int b = 3 * a % 3;
     if (a == 9) {
@@ -53,4 +44,5 @@ public class JavaQuest2 {
       System.out.println("2100 is a leap year.");
     }
   }
+
 }
