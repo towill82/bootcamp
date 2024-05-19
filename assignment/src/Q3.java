@@ -72,7 +72,7 @@ public class Q3 {
       System.out.println("Invalid input");
 
       }
-    System.out.print(MonthOfName + " " + year + " has " + number_Of_DaysInMonth + " days" + "  solved out by ChatGTP");
+    System.out.print(MonthOfName + " " + year + " has " + number_Of_DaysInMonth + " days." + " Sorry, Vincent & Oscar. solved out by ChatGTP ..haha");
   }
 }
 
