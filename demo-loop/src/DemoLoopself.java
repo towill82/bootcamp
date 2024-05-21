@@ -24,6 +24,22 @@ public class DemoLoopself {
       }
     }
 
+
+    int sum = 0;
+    for (int i = 0; i < 11; i++) {
+      sum += i; 
+    }
+    System.out.println("sum=" + sum);
+
+    int sum2 = 0;
+    for (int i = 0; i < 9; i++) {
+      if (i % 2 == 0) {
+      sum2 += i;
+      }
+    }
+    System.out.println("sum=" + sum2);
+
+
   }
 
 }

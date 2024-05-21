@@ -25,8 +25,8 @@ public class Q4 {
         System.out.println(i);
       int x = 0;
         x++;
-        if (x == 10) 
-          break;
+        if (x == 10) {
+          break;}
         }
       }
     }
