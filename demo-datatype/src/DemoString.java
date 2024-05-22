@@ -126,6 +126,10 @@ public class DemoString {
      System.out.println(x3.substring(0, 3).length()); // 3
      System.out.println(x3.substring(0, 3).charAt(1)); // 'e'
 
+     //
+     String x6 = x3.substring(0, 3); //"Wel"
+     System.out.println(x6.length()); // 3
+
      String x4 = x3.substring(0, 3);
      int l1 = x4.length();
      System.out.println(l1); //3
@@ -136,6 +140,52 @@ public class DemoString {
       System.out.println("yes");
      }
 
+     // isEmpty()
+     // Empty String value -> ""
+     String x7 = "";
+     System.out.println(x7.isEmpty()); //true
+     String x8 = "abc";
+     System.out.println(x8.isEmpty()); //false
+
+     System.out.println(x7.length() == 0); //true
+
+     // isBlank()
+     String x9 = "";
+     System.out.println(x9.isBlank()); //true
+     x9 = " ";
+     System.out.println(x9.isBlank()); //true
+     System.out.println(x9.isEmpty()); //false
+
+     // substring(0,3)
+     // substring(0)
+     String s10 = "hello";
+     System.out.println(s10.substring(0)); // from index 0 to the end)
+     System.out.println(s10.substring(0,3)); // from index 0 to the index 2 (3-1)
+
+     // hello -> HELLO
+     System.out.println(s10.toUpperCase()); // "HELLO"
+     String s11 ="Hello";
+     System.out.println(s11.toLowerCase()); // "hello"
+
+     System.out.println(s10.replace('l','x')); // "hexxo"
+     System.out.println(s10.replace("ll","yyyy")); // "heyyyyo"
+     System.out.println(s10.replace("lll","abc")); // "hello" as cannot find "lll"
+
+     System.out.println(s10.contains("ell")); //true
+
+     // startsWith()
+     System.out.println(s10.startsWith("he")); //true
+     // endsWith()
+     System.out.println(s10.endsWith("o")); //true
+
+     // trim(), removing the space characters at the head/tail of the String.
+     String s12 = "     Hello,  bootcamp   !!!   ";
+     System.out.println(s12.trim()); // Hello,  bootcamp   !!!
+
+     String[] strings = new String[] {"hello", "abcijk", "vincent", "Hello", "  HELLO   "};
+     // how many strings contains "ELL", but ignore case
+     // "eLL" or "ell or "ELl" ....
+     // toUpperCase(), contains()
 
 
 

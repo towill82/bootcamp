@@ -1,10 +1,11 @@
+
 import java.util.Arrays;
 
 public class DemoArray {
   public static void main(String[] args) {
     int x1 = 10;
     int x2 = 20;
-    int x3 = -3;
+    int x3 = -3; // -3 -> int value, while x3 -> variable
 
     // When you create an array object, you have to define the length of it.
     int[] arr = new int[3]; // stores int value only, and the length = 3
@@ -37,7 +38,9 @@ public class DemoArray {
 
     byte[] bytes = new byte[] {2, 3, 4};
     long[] values = new long[] {2, 3, 4};
-    double[] dl = new double[] {2.0, 3.3, 4};
+    double[] d1 = new double[] {2.0, 3.3, 4};
+
+    System.out.println(d1[1]); // 3.3
 
     // Arrays.
     System.out.println(Arrays.toString(strings)); // [hello, abc, ijk]
@@ -105,7 +108,37 @@ public class DemoArray {
     char[] c2 = new char[] {'a', 'b', 'f'};
     // 4a. result -> "oakpabft". append all characaters to a String value
     // 4b. result -> "obkt". when even index, get the value from c1. when odd index, get the value from c2
+    String result1 = "";
+    for (int i = 0; i < c1.length; i++) {
+      result1 += c1[i]; // String value + char ->String
+    }
+    for (int i = 0; i < c2.length; i++) {
+      result1 += c2[i];
+    }
+    System.out.println(result1);
 
+    // 4b. result -> "obkta". when even index, get the value from c1. when odd index, get the value from
+    String result2 = "";
+    char[] c3 = new char[] {'o', 'a', 'k', 'p', 'a', 'b'};
+    char[] c4 = new char[] {'a', 'b', 'f', 't'};
+
+    // obkta
+    // if (c1.length > c2.length) {
+     // length = c1. length;
+     // } else {
+     // length = c2.length;
+    // }
+
+    int length = c3.length > c4. length ? c3.length : c4.length;
+
+    for (int i = 0; i < length; i++) {
+      if (i % 2 == 0 && i < c3.length) {
+        result2 += c3[i];
+      } else if (i % 2 == 1 && i < c4.length) {
+        result2 += c4[i];
+        }
+      }
+      System.out.println(result2); // obkta
 
 
 
