@@ -92,4 +92,10 @@ public class DemoMethod {
       }
       return false;
   }
+
+  // Java --> PI (how to do radius in Java world)
+  // assignment
+  public static double circleArea(int radius) {
+
+  }
 }
