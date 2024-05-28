@@ -17,7 +17,18 @@ public class DemoMethod {
     System.out.println(max(new int[] {3, 10, 7})); // 10
 
     System.out.println(isSubstring("hello","ll")); // true
+    System.out.println(isSubstring("hello","lll")); // false
+    System.out.println(isSubstring("hello","lo")); // true
+    System.out.println(isSubstring("hello","loo")); // false
 
+    // circle Area
+    System.out.println(circleArea(3)); //28.274333882308138
+
+    // double * double (problem)
+    // BigDecimal (solution)
+    System.out.println(0.2 * 0.1); //0.020000000000000004
+
+    
   } 
 
 
@@ -96,6 +107,6 @@ public class DemoMethod {
   // Java --> PI (how to do radius in Java world)
   // assignment
   public static double circleArea(int radius) {
-
+    return radius * radius * Math.PI; // int * int * double -> double (2 * 2 * 2.0 -> 8.0)
   }
 }
