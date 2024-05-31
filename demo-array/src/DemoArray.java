@@ -196,12 +196,18 @@ public class DemoArray {
       // for loop
       // nested loop
 
-      // for () { // round
-      // for () { // moving
+      for (int i = 0; i < arr6.length - 1; i++) { // round
+        for (int j = 0; i < arr6.length - i - 1; j++) { // moving
+          if (arr6[j] > arr6 [j + 1]) {
+            t = arr6[j];
+            arr6[j] = arr6[j + 1];
+            arr6[j + 1] = t;
+          }
+        }
+      }
+      System.out.println(Arrays.toString(arr6)); //[-4, 6, 10, 15]
 
-      //}
-      //}
-
+      
       //Swap char value
       String str = "hello"; // swap e and o -> holle
       // convert char[]
