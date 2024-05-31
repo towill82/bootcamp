@@ -24,6 +24,7 @@ public class DemoMethod {
     // circle Area
     System.out.println(circleArea(3)); //28.274333882308138
 
+
     // double * double (problem)
     // BigDecimal (solution)
     System.out.println(0.2 * 0.1); //0.020000000000000004
