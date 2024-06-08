@@ -16,5 +16,10 @@ public class TestCat {
     System.out.println(c2.getAge()); // 7
     System.out.println(c1.getAge()); // 10
 
+    Cat c3 = new Cat();
+    System.out.println(c3.getAge()); // 0, because primitive type has defalut value
+
+    Ball b = new Ball();
+    // "Ball b" -> becuase
   }
 }
