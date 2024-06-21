@@ -1,4 +1,4 @@
-public class Person { // abstract
+public abstract class Person { // abstract
   private String name;
   private int age;
 
@@ -16,7 +16,8 @@ public class Person { // abstract
   }
 
   public static void main(String[] args) {
-    Person p = new Person("Vincent", 13);
+    // abstract class CANNOT create object
+    // Person p = new Person("Vincent", 13);
 
     // Student.class is public
     // Student.class constructor is public
