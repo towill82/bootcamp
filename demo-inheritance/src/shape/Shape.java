@@ -27,8 +27,14 @@ public abstract class Shape {
   public static void main(String[] args) {
     System.out.println(Shape.circleArea(3.0d));
     Shape[] shapes = new Shape[] {new Circle(3.0d), new Square(4.0d)};
-    System.out.println(Shape.totalArea(shapes));
+    System.out.println(Shape.totalArea(shapes)); // 358.435992 ..
   }
+
+  // extra example (BigDecimal vs StringBuilder Design Difference)
+  StringBuilder sb = new StringBuilder("hello");
+  sb = sb.append("world"); // Java: You don't have to assign the return object to a reference.
+  System.out.println(sb); // helloworld
+  // You should refer to Box.java for the answer.
 
 }
 

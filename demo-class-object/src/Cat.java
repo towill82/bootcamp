@@ -39,15 +39,15 @@ public class Cat { // Class Name -> Name Convention -> able to describe physical
     return "hello";
   }
 
-  public static String hello(String s) {
-    return 
-  }
+  // public static String hello(String s) {
+  //   return 
+  // }
 
   public static void main(String[] args) {
     // the purpose of static method -> produce something by the input parameters
     // static method should not access any object attributes/ behaviors
     System.out.println(Cat.hello()); // hello
-    System.out.println(Cat.hello("goodbye")); // goodbye
+  //  System.out.println(Cat.hello("goodbye")); // goodbye
     System.out.println(Book.hello()); // hello
 
     System.out.println(3); // 3
@@ -57,7 +57,7 @@ public class Cat { // Class Name -> Name Convention -> able to describe physical
     Cat cat = new Cat();
     cat.setAge(13);
     cat.setName("ABC");
-    System.out.println(cat.describe()); // The age of this cat is 13, and name of this cat is ABC
+  //  System.out.println(cat.describe()); // The age of this cat is 13, and name of this cat is ABC
 
   
   }
