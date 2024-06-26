@@ -35,6 +35,23 @@ public class DemoObject {
     System.out.println(mc2.hashCode()); //71832679
     System.out.println(mc3.hashCode()); //-1907721274
 
+    Object cat = new Cat();
+    // cat (object reference) indeed pointing to cat object.
+    // run() instance method can only be called by object declared by Cat.class
+    // if the object reference is declared by Object.class, it cannot call run() method
+    // cat.run(); // compile error
+
+    // downcast 
+    Cat cat2 = (Cat) cat; // Reason why compile error; Java compiler cannot guaratee 
+    cat2.run();
+
+    // Cat.class inerit Object.class
+    cat2.hashCode();
+    cat2.equals(cat);
+
+    // the different between cat & cat2 object reference
+    
+    
     }
     // Java: Ensure Type Safety during compile time
     // public static Object sum(Object x, Object y) {

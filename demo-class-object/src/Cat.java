@@ -48,7 +48,7 @@ public class Cat { // Class Name -> Name Convention -> able to describe physical
     // static method should not access any object attributes/ behaviors
     System.out.println(Cat.hello()); // hello
   //  System.out.println(Cat.hello("goodbye")); // goodbye
-    System.out.println(Book.hello()); // hello
+    System.out.println(Book2.hello()); // hello
 
     System.out.println(3); // 3
 
