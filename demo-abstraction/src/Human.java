@@ -1,4 +1,14 @@
 public class Human implements Walkable, Readable {
+
+  // Class can only inherit instance methods, instance variables.
+  // Constructor CANNOT be inherited.
+  public Human() {
+
+  }
+
+  public Human(double height) {
+    super(height); // SuperHuman's constructor
+  }
   @Override
   public void walk(){
     System.out.println("Human is walking ...");
@@ -7,6 +17,11 @@ public class Human implements Walkable, Readable {
   @Override
   public void read(){
     System.out.println("Human is reading ...");
+  }
+
+  @Override
+  public double getHeight() {
+    return super.getHeight() + 1;
   }
 
   public static void main(String[] args) {
