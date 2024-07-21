@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class DemoDataStructure {
+public class ArrayListDemo {
   public static void main(String[] args) throws Exception {
      Integer[] integers = new Integer[] {2, 10, -4};
      // for-each
@@ -71,7 +71,37 @@ public class DemoDataStructure {
      strings.add("hello"); // add "hello" -> ["hello", "world", "hello"]
      System.out.println(strings);
      strings.remove("hello"); // remove "hello" -> ["world"]
-     System.out.println(strings);
+     System.out.println(strings); // [world, hello]
+
+
+     // get by index: get()
+     System.out.println(strings.get(0)); //world
+
+     // Question 1: Give String[], remove those string with length <= 3
+     String[] stringArray = new String [] {"anc", "a", "", null, "aaaa"};
+     ArrayList<String> result = new ArrayList<>();
+      for (String s : stringArray) {
+         if (s != null && s.length() > 3) {
+            result.add(s);
+         }
+      }
+     System.out.println(result); // ["aaaa"]
+
+     // Question 2: Given Customer[], retrieve all person object with age > 30 or
+     // name startsWith "J"
+     Customer[] customers = new Customer[] {new Customer(40, "Mary") //
+     , new Customer(31, "John") //
+     , new Customer(29, "Jason") //
+     , new Customer(29, "Cindy")};
+     // loop
+     ArrayList<Customer> customerList = new ArrayList<>();
+     for (Customer c : customers){
+      if (c.getAge() > 30 || (c.getName() != null && c.getName().startsWith("J"))){
+         customerList.add(c);
+      }
+     }
+
+     System.out.println(customerList);
 
     }
 }
