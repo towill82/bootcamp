@@ -32,7 +32,7 @@ public class HashMapDemo {
 
     // Handle duplicated key -> overwrite the value if the key exists
     nameMap.put(1010, "Peter");
-    System.out.println(nameMap);
+    System.out.println(nameMap); // {1010=Peter, 100=Vincent, -45=Sally}
 
     // null key
     nameMap.put(null, "Oscar"); // OK
@@ -42,13 +42,31 @@ public class HashMapDemo {
     nameMap.put(-45, null);
     System.out.println(nameMap);
 
-    // 
-    nameMap.remove(1010);
-    System.out.println(nameMap);
-
     //
-    String oldValue = nameMap.remove(-45); // remove entry by key
+    String oldValue = nameMap.remove(1010); // remove entry by key
     System.out.println(nameMap);
-    System.out.println(oldValue);
+    System.out.println(oldValue); // Peter
+
+    System.out.println(nameMap.containsKey(-45)); // true
+
+    // Loop keyset()
+    for (Integer x: nameMap.keySet()) {
+      System.out.println(x);
+    }
+
+    // Loop values
+    for (String x: nameMap.values()) {
+      System.out.println(x); // null
+    }
+
+    System.out.println(nameMap.size()); // 3
+
+    System.out.println(nameMap.containsValue("Oscar")); // true
+    System.out.println(nameMap.containsValue("Peter")); // false
+
+    System.out.println(nameMap.get(-45)); // null
+
+
+    // please get use to the method " put , get , contains, for loop 
   }
 }
