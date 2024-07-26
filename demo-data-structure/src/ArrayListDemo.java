@@ -1,3 +1,4 @@
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -105,9 +106,24 @@ public class ArrayListDemo {
      System.out.println(customerList);
 
      ArrayList<Object> objects = new ArrayList<>();
-     objects.add("abc");
+     objects.add(new String("abc"));
      objects.add(1);
      objects.add(LocalDate.of(2024, 5, 22));
+     objects.add(new HKID("A1234567"));
+
+     // Polymorphism Part 2: runtime -> implementation
+     for (Object obj :objects) {
+      if (obj.equals(new String("abc"))) { // string object equals()
+         System.out.println("hello");
+      } else if (obj.equals(new HKID ("A1234567"))) { // hkid object equals()
+         System.out.println("hellow2");
+      } else if (obj.equals(new Integer(1))) { // integer object equals()
+         System.out.println("hellow3");
+      } else if (obj.equals(LocalDate.of(2024, 5, 22))) { // LocalDate equals()
+         System.out.println("hellow4");
+      }
+     }
+
      // print
      // check if the objects equals to xxx... 
      // Compare the difference between ArrayList<Object> and ArrayList<String>
