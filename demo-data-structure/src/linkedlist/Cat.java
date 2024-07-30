@@ -13,7 +13,7 @@ public class Cat {
   }
 
   public Eye[] getLeftEyes() {
-    return this.eyes[0];
+    return this.getEyes[0];
   }
 
   public Eye[] getRightEyes() {

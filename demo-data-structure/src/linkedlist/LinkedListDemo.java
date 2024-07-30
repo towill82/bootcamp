@@ -1,6 +1,8 @@
 package linkedlist;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class LinkedListDemo {
   public static void main(String[] args) {
@@ -40,5 +42,69 @@ public class LinkedListDemo {
     }
 
     System.out.println(strings2.isEmpty()); // false
+
+    // LinkedList vs ArrayList
+    // 1. Underlying DS
+    // 2. Method Difference (i.e. LinkedList -> addFirst(), removeFirst())
+
+    LinkedList<String> ll = new LinkedList<>();
+    ll.add("hello");
+    ll.addFirst("abc");
+    ll.add("def");
+    for (String s : ll) {
+      System.out.println(s);
+    }
+    ll.removeFirst(); 
+    for (String s : ll) {
+      System.out.println(s);
+    }
+
+    System.out.println(ll.indexOf("hello")); // 0
+
+    ll.add("hello");
+    System.out.println(ll.lastIndexOf("hello")); // 2
+
+
+    // Queue.class
+    Queue<String> emails = new LinkedList<>();
+    emails.add("john@gmail.com");
+    emails.add("peter@gmail.com");
+    System.out.println(emails.size()); // Collection.class
+    String head = emails.poll(); // remove and return the first element in queue
+    System.out.println(head); // john
+    emails.add("sallly@hotmail.com");
+    emails.add("dicky@yahoo.com.hk"); 
+
+    String lookup = emails.peek(); // return the first element in queue
+    System.out.println(lookup); // peter@gmail.com
+
+    emails.remove(new String("dicky@yahoo.com.hk"));
+    // LinkedList.class remove(Object) -> LinkedList For loop
+
+    // remove
+    System.out.println(emails); // [peter@gmail.com, sally@hotmail.com]
+    emails.remove(); // same as poll()
+
+
+    // for-each
+    for (String s : emails) {
+      System.out.println(s);
+    }
+    // Convert Queue<String> to List<String>
+    List<String> strings4 = new ArrayList<>();
+    while(!emails.isEmpty()) { // isEmpty()
+      System.out.println(emails.poll());
+      strings4.add(emails.poll());
+    }
+    System.out.println(strings4);
+    System.out.println(emails); // after while loop, all elements are removed.
+
+    // clear()
+    strings4.clear(); // Clear all the objects inside the ArrayList Object
+    strings4.add("abc");
+    strings4 = null; // remove the ArrayList object 
+    // strings4.add("def"); // NPE (null pointer exception)
+
+
   }
 }
