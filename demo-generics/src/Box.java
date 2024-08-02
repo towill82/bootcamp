@@ -17,6 +17,11 @@ public class Box<T> {  //<T> just like "unknow" & any Type
     this.value = value;
   }
 
+  // The T declared in static method has NO relationship to the T declared in attribute
+  public static <T> Box<T> createBox(T value) {
+    return new Box<>(value);
+  }
+
   public static void main(String[] args) {
 
   // Run time
@@ -28,5 +33,9 @@ public class Box<T> {  //<T> just like "unknow" & any Type
 
   // You cannot use T during run-time
   // Box<T> box = new Box<>();
+
+    Box<String> stringBox = Box.createBox("hello");
+    Box<Bird> birdBox = Box.createBox(new Bird());
+
   }
 }
