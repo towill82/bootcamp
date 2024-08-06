@@ -1,5 +1,5 @@
 package shape;
 
-public class bird {
+public class Bird {
   
 }

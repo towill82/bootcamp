@@ -46,5 +46,30 @@ public class PriorityQueueDemo {
     System.out.println(pq3.poll()); // -23
     System.out.println(pq3.poll()); // 10
     System.out.println(pq3.poll()); // 10000
+  
+  Queue<Long> pq4 = new PriorityQueue<>(new LongDescendingOrder());
+  // Class -> formula
+  // add
+  pq4.add(Long.valueOf(100));
+  pq4.add(Long.valueOf(-40));
+  pq4.add(Long.valueOf(9));
+  pq4.add(Long.valueOf(105));
+
+  //poll
+  System.out.println(pq4.poll()); // 105
+  System.out.println(pq4.poll()); // 100
+  System.out.println(pq4.poll()); // 9
+  System.out.println(pq4.poll()); // -40
+
+  Queue<Customer> pq5 = new PriorityQueue<>(new CustomerSortByAge.of());
+  pq5.add(new Customer(40));
+  pq5.add(new Customer(45));
+  pq5.add(new Customer(19));
+  pq5.add(new Customer(27));
+
+  System.out.println(pq5.poll()); // Customer (age = 45)
+  System.out.println(pq5.poll()); // Customer (age = 40)
+  System.out.println(pq5.poll()); // Customer (age = 27)
+  System.out.println(pq5.poll()); // Customer (age = 19)
   }
 }
