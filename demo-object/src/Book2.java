@@ -32,9 +32,9 @@ public class Book2 { // implicitly inherit Object.class
   public boolean equals(Object obj) {
     if (this == obj)
       return true;
-    if (!(obj instanceof Book)) // "instanceof" is checking if the object pointing by reference is an object produced by Book.
+    if (!(obj instanceof Book1)) // "instanceof" is checking if the object pointing by reference is an object produced by Book.
       return false;
-    Book book = (Book) obj;//
+    Book1 book = (Book1) obj;//
     return Objects.equals(this.author, book.getAuthor())
      && Objects.equals(this.getPublishDate(), book.getPublishDate());
 
