@@ -23,6 +23,15 @@ public class DemoThreadCreation {
     }
     System.out.println("Program ends ...");
 
+
+    // 
+    AddStringMillionTimeThread thread2 = new AddStringMillionTimeThread();
+    thread2.start(); // run()
+    try {
+      thread2.join();
+    } catch (InterruptedException e) {
+
+    }
+    System.out.println(thread2.getStrings().size()); // 1000000
+   }
   }
-  
-}
